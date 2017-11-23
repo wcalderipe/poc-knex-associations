@@ -26,3 +26,11 @@ npm run sqlite:run
 npm run psql:setup
 npm run psql:run
 ```
+
+```
+# mysql 
+
+# first you'll need create a database poc_knex_associations
+npm run mysql:setup
+npm run mysql:run
+```

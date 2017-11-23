@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sqlite:setup": "NODE_ENV=sqlite knex migrate:latest && knex seed:run",
+    "sqlite:setup": "NODE_ENV=sqlite knex migrate:latest && NODE_ENV=sqlite knex seed:run",
     "sqlite:run": "NODE_ENV=sqlite node index.js",
-    "psql:setup": "NODE_ENV=psql knex migrate:latest && knex seed:run",
-    "psql:run": "NODE_ENV=psql node index.js"
+    "psql:setup": "NODE_ENV=psql knex migrate:latest && NODE_ENV=psql knex seed:run",
+    "psql:run": "NODE_ENV=psql node index.js",
+    "mysql:setup": "NODE_ENV=mysql knex migrate:latest && NODE_ENV=mysql knex seed:run",
+    "mysql:run": "NODE_ENV=mysql node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "knex": "^0.14.1",
+    "mysql": "^2.15.0",
     "pg": "^7.4.0",
     "sqlite3": "^3.1.13"
   }
