@@ -1,5 +1,6 @@
-const {sqlite, psql} = require('./knexfile')
-const knex = require('knex')(psql)
+const config = require('./knexfile')
+const client = process.env.NODE_ENV || 'sqlite'
+const knex = require('knex')(config[client])
 
 knex('applications as Application')
  .leftJoin('features as Feature', 'Application.id', '=', 'Feature.application_id')

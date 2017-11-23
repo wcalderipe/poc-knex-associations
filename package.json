@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sqlite:setup": "NODE_ENV=sqlite knex migrate:latest && knex seed:run",
-    "psql:setup": "NODE_ENV=psql knex migrate:latest && knex seed:run"
+    "sqlite:run": "NODE_ENV=sqlite node index.js",
+    "psql:setup": "NODE_ENV=psql knex migrate:latest && knex seed:run",
+    "psql:run": "NODE_ENV=psql node index.js"
   },
   "author": "",
   "license": "ISC",
